@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Conda / env
+env/
+.venv/
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+
+# Large files (important for ML)
+*.pt
+*.pth
+*.bin
+*.ckpt
+
+# Data (optional)
+data/
