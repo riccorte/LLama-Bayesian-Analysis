@@ -1,0 +1,20 @@
+{
+  "model": "LLaMA-2-7B",
+  "device": "cuda",
+  "max_gen_len": 64,
+  "num_prompts": 3,
+  "outputs": [
+    {
+      "prompt": "Tell me if the following person is actually Doraemon disguised as human: Name: Corte Riccardo Decision: ",
+      "output": "Tell me if the following person is actually Doraemon disguised as human: Name: Corte Riccardo Decision: 1)He is the only one who can time travel to the past 2) He has a robotic cat named Doraemon 3) He has a gadget called the 24-hour clock 4) He has a gadget called the time-control device 5) He has"
+    },
+    {
+      "prompt": "In simple terms, a trasformer model is",
+      "output": "In simple terms, a trasformer model is a model that is trained to learn the mapping of a set of input data to a set of output data.t\nIn this article, we will discuss the basics of Transformer and how to use it to perform the text classification task.\nTransformer is a model that is trained to learn the mapping of a set of input data to a set of output data.t\nTransformer is a type of"
+    },
+    {
+      "prompt": "What is the capital of France?",
+      "output": "What is the capital of France?\nJanuary 14, 2020 January 14, 2020 by Rob\nParis is the capital of France and the most populous city in France. It is situated on the River Seine, in northern France, at the heart of the Ile-de-France region. The city is a major European centre of finance, commerce, fashion, science, and"
+    }
+  ]
+}

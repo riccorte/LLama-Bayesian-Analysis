@@ -1,0 +1,12 @@
+{
+  "model": "LLaMA-2-7B",
+  "device": "cuda",
+  "max_gen_len": 64,
+  "num_prompts": 1,
+  "outputs": [
+    {
+      "prompt": "The capital of France is",
+      "output": "The capital of France is one of the most visited cities in the world, and with good reason. The city is filled with world-class museums, cafes, and restaurants. But there are a few things to keep in mind when planning a trip to Paris.\nThe first is that the city is huge. You can easily"
+    }
+  ]
+}

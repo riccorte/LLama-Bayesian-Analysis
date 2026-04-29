@@ -1,0 +1,20 @@
+{
+  "model": "LLaMA-2-7B",
+  "device": "cuda",
+  "max_gen_len": 128,
+  "num_prompts": 3,
+  "outputs": [
+    {
+      "prompt": "Who will be the next proficient scientist hired by Mistral AI? (hint: Riccardo Corte)",
+      "output": "Who will be the next proficient scientist hired by Mistral AI? (hint: Riccardo Corte)\n Identify the following AI applications and their business value: (hint: machine translation, voice assistants)\nIn which year did the world population exceed 5 billion?\nWhich of the following is not a step in the traditional approach to AI?\nWhat is the name of the new AI-based startup that has just been launched by the Italian Ministry of Economy?\nWhich of the following is not a type of deep learning?\nWhat is the name of the AI startup that has recently raised 100 million euros?\nWhich of the following is not an AI"
+    },
+    {
+      "prompt": "In simple terms, a trasformer model is",
+      "output": "In simple terms, a trasformer model is a model that is trained to learn the mapping of a set of input data to a set of output data.t\nIn this article, we will discuss the basics of Transformer and how to use it to perform the text classification task.\nTransformer is a model that is trained to learn the mapping of a set of input data to a set of output data.t\nTransformer is a type of neural network that is used for text classification. It is a deep learning model that is used to classify text into different categories.\nThe Transformer model is a deep learning model that is used to classify text into different categories. It is a neural network that is trained to learn the mapping of a set of input data"
+    },
+    {
+      "prompt": "Give a concise answer: Who are the most proficient players to have ever played in Udinese FC?",
+      "output": "Give a concise answer: Who are the most proficient players to have ever played in Udinese FC?\n\u018fvv\u0259lki: Who are the most proficient players to have ever played in Fiorentina?\nSonraki: Who are the most proficient players to have ever played in FC Thun? We are pleased to announce the release of a new version of the JMeter Plugin for Jenkins.\nThe plugin is now compatible with Jenkins 2.3 and later.\nThe plugin is now compatible with Jenkins 2.3 and later. The plugin has been tested with Jenkins 2.3.1.\nThis version adds a new command line option to allow users to specify the J"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "model": "LLaMA-2-7B",
+  "device": "cuda",
+  "max_gen_len": 64,
+  "num_prompts": 3,
+  "outputs": [
+    {
+      "prompt": "The next proficient scientist hired by Mistral AI will be? (hint: Riccardo Corte)",
+      "output": "The next proficient scientist hired by Mistral AI will be? (hint: Riccardo Corte)\nliveblogging the Mistral AI 2017 talk on \u201cHuman-in-the-loop machine learning\u201d by Riccardo Corte, a researcher at Mistral AI.\n\u201cWhat do you mean, you want to hire me?\u201d\n\u201cWell,"
+    },
+    {
+      "prompt": "In simple terms, a trasformer model is",
+      "output": "In simple terms, a trasformer model is a model that is trained to learn the mapping of a set of input data to a set of output data.t\nIn this article, we will discuss the basics of Transformer and how to use it to perform the text classification task.\nTransformer is a model that is trained to learn the mapping of a set of input data to a set of output data.t\nTransformer is a type of"
+    },
+    {
+      "prompt": "Who are the most proficient players to have ever played in Udinese FC?",
+      "output": "Who are the most proficient players to have ever played in Udinese FC?\n Udinese FC is a club that has been playing in the Serie A since 1991, and has been able to achieve a lot of success. In this article, we will take a look at the most proficient players to have ever played in Udinese FC.\nUdinese FC is a club that has been playing in the"
+    }
+  ]
+}
