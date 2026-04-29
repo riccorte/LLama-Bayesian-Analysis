@@ -114,9 +114,9 @@ understand whether transformers approximate posterior inference or use a differe
 
 ## Acknowledgements
 
-This implementation was developed following the excellent educational materials by **:contentReference[oaicite:0]{index=0}**, whose tutorials on building transformer architectures from scratch were instrumental in understanding and implementing the LLaMA model.
+This implementation was developed following the excellent educational materials by **Umar Jamil**, whose tutorials on building transformer architectures from scratch were instrumental in understanding and implementing the LLaMA model.
 
-The pretrained model weights used in this project are provided by **:contentReference[oaicite:1]{index=1}** under the LLaMA 2 license.
+The pretrained model weights used in this project are provided by **META** under the LLaMA 2 license.
 
 This project builds upon these resources for educational and research purposes.
 
