@@ -1,23 +1,26 @@
-# LLaMA Inference from Scratch & Bayesian Analysis (WIP)
+# LLaMA Inference from Scratch
 
-This project implements a **LLaMA-style transformer from scratch in PyTorch**, with a focus on understanding:
+This project implements a **LLaMA-style transformer from scratch in PyTorch** and runs
+autoregressive inference with the official pretrained LLaMA 2 weights.
 
-- autoregressive inference
-- attention mechanisms (grouped-query attention)
-- rotary positional embeddings (RoPE)
-- KV caching for efficient decoding
+The focus is on a clean, readable reconstruction of:
 
-The long-term goal is to study whether transformer models can perform **implicit Bayesian inference**.
+- the LLaMA 2 architecture (RMSNorm, rotary positional embeddings, grouped-query attention,
+  SwiGLU feed-forward)
+- autoregressive decoding with KV caching
+- top-p (nucleus) sampling
+
+It is an implementation and inference study, there is no training loop.
 
 ---
 
-## Current Status
+## Status
 
-- Implemented core LLaMA architecture from scratch
-- Successfully loaded **LLaMA 2 7B weights**
-- Ran autoregressive inference on GPU (Tesla T4)
-- Implemented token-by-token generation with KV caching
-- Saving reproducible outputs for analysis
+- Core LLaMA architecture implemented from scratch
+- Pretrained **LLaMA 2 7B** weights loaded successfully
+- Autoregressive inference run on GPU (Tesla T4)
+- Token-by-token generation with KV caching
+- Reproducible outputs saved under `outputs/`
 
 ---
 
@@ -35,100 +38,38 @@ Full outputs are available in [`examples/sample_inference_output.json`](examples
 
 ## How Inference Works
 
-The pipeline:
-
 1. Load model parameters (`params.json`)
 2. Load pretrained weights (`consolidated.00.pth`)
-3. Build transformer architecture from scratch
-4. Tokenize input prompt
+3. Build the transformer architecture from scratch
+4. Tokenize the input prompt
 5. Generate tokens autoregressively:
    - forward pass
-   - sampling (top-p)
+   - top-p sampling
    - KV cache reuse
 6. Decode tokens to text
 
 ---
 
-## Project Goal (Ongoing Work)
+## Run the Project
 
-The objective is to explore whether transformer models can approximate **Bayesian inference**.
+First, download the LLaMA 2 weights from Meta's official site:
+<https://www.llama.com/llama-downloads/>
 
-### Core Idea
+```bash
+pip install -r requirements.txt
+python inference.py
+```
 
-Train or analyze a transformer on synthetic data generated from known distributions, and compare its predictions to:
+`inference.py` runs a set of example prompts (zero-shot, few-shot and a short translation
+task) defined in `__main__`. Set `allow_cuda = True` there to run on GPU.
 
-- exact Bayesian posterior
-- classical inference methods
-
----
-
-## Planned Experiments
-
-### 1. Function Inference
-
-- Generate noisy data from known functions (e.g. sinusoidal, polynomial)
-- Train or prompt the model to predict the function
-- Compare predictions to:
-  - ground truth
-  - Bayesian posterior
-
----
-
-### 2. Implicit Prior Analysis
-
-Investigate whether:
-
-- pretraining or prompt structure induces a **prior**
-- model predictions change as more data is provided
-- behavior matches Bayesian updating
-
----
-
-### 3. Hidden State Analysis
-
-- Measure how much information about true parameters is encoded
-- Possible metric:
-  - mutual information between hidden states and ground truth parameters
-
----
-
-### 4. Transformer vs Bayesian Inference
-
-Compare:
-
-- transformer predictions
-- analytical Bayesian solutions
-
-Goal:
-understand whether transformers approximate posterior inference or use a different mechanism.
-
----
-
-## Future Directions
-
-- Compare LLaMA-style architecture vs vanilla transformer
-- Study geometry of hidden representations
-- Analyze information flow across layers
+Model weights (`*.pth`, `*.bin`) are gitignored and are not part of this repository. Use of
+the LLaMA 2 weights is subject to the Llama 2 Community License (`LICENSE`, `USE_POLICY.md`).
 
 ---
 
 ## Acknowledgements
 
-This implementation was developed following the excellent educational materials by **Umar Jamil**, whose tutorials on building transformer architectures from scratch were instrumental in understanding and implementing the LLaMA model.
-
-The pretrained model weights used in this project are provided by **META** under the LLaMA 2 license.
-
-This project builds upon these resources for educational and research purposes.
-
-
----
-
-## Run the Project
-
-First: Install the necessary LLama weights from the meta official website: https://www.llama.com/llama-downloads/
-
-```bash
-pip install -r requirements.txt
-python inference.py
-
-
+Developed following the educational materials by **Umar Jamil**, whose tutorials on building
+transformer architectures from scratch were instrumental in implementing the LLaMA model.
+The pretrained weights are provided by **Meta** under the LLaMA 2 license.
